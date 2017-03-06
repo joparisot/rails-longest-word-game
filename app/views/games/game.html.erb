@@ -1,0 +1,14 @@
+<h1>Games#random_grid</h1>
+<p>Find me in app/views/games/random_grid.html.erb</p>
+
+<%= @grid %>
+
+<form action="/score" method="get">
+  <input type="hidden" name="start_time" value = <%= Time.now %>>
+  <!-- <input type="hidden" name="start_time" value = <%= @start_time %>> -->
+
+  <input type="text" placeholder="your best guess" name="guess">
+  <input type="hidden" name="grid" value= <%= @grid.join(";") %> >
+  <input type="submit">
+  <!-- <input type="hidden" name="end_time" value = <%= Time.now %>> -->
+</form>
