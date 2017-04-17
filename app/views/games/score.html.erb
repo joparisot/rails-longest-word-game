@@ -1,4 +1,6 @@
 <h1>Find below your score!</h1>
 
-<%= 'Your score is ' + @result[:score].to_s + ', and ' + @result[:message].to_s + 'You have taken ' + @result[:time].to_s %>
+<%= 'Your score is ' + @result[:score].to_s + ', and ' + @result[:message].to_s + 'You have taken ' + @result[:time].to_s  + 'and you have played ' + session[:game_count].to_s + ' times' %>
+
+<%= link_to "Play again", game_path %>
 

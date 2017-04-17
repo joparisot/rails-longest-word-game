@@ -25,6 +25,9 @@ class GamesController < ApplicationController
     else
       @result = {score: 0, message: "not in the grid", time: @total_time }
     end
+
+    session[:game_count] ? session[:game_count] += 1 : session[:game_count] = 1
+
   end
 
   def check_guess
